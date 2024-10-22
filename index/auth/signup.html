@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign up</title>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/mui.min.css">
+    <link rel="stylesheet" href="../../static/css/mui.loading.css">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+    <style type="text/css">
+        .appContent {
+            border-radius: 16px 16px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page loading -->
+    <div class="loading">
+        <div class="spinner-grow"></div>
+    </div>
+    <!-- * Page loading -->
+
+    <!-- App Header -->
+    <div class="appHeader">
+        <div class="left">
+            <a href="javascript:;" class="icon goBack">
+                <i class="icon ion-ios-arrow-back"></i>
+            </a>
+        </div>
+        <div class="pageTitle">Sign up</div>
+    </div>
+
+    <div id="appCapsule" class="pb-2">
+        <div class="appContent pb-0 mt-3">
+            <div class="sectionTitle mt-3 pt-3">
+                <div class="lead mb-2">Create account and enjoy all services</div>
+            </div>
+
+            <form class="form-group" method="post" id="signup-form">
+                <!--<div class="form-group mb-3">-->
+                <!--    <input type="text" name="nickname" class="form-control" placeholder="Please enter your full name">-->
+                <!--</div>-->
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" name="area_code" value="+91" style="width: 22%; float: left;text-center" readonly="">
+                    <input type="number" name="mobile" class="form-control" placeholder="Please enter mobile account" oninput="value=value.replace(/[^\d]/g,'')" style="width: 78%;">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="password" name="password" class="form-control" placeholder="Please input password">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="password" name="cpassword" class="form-control" placeholder="Please input password">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" name="invitecode" value="" class="form-control" placeholder="Please enter the invitation code">
+                </div>
+
+                                <div class="form-group mb-3">
+                    <div style="clear: both;"></div>
+                    <input type="text" class="form-control uwp mb-3" name="captcha" placeholder="Captcha" data-rule="Captcha:required;length(4)" style="width: 70%; float: left;">
+                    <img class="mb-2" src="/index.php?s=/captcha" width="130" height="70" onclick="this.src = '/index.php?s=/captcha&r=' + Math.random();" style="float: right; width: 26%; height: 50px; border-radius: 0.25rem;">
+                </div>
+                
+                <input type="hidden" name="__token__" id="token" value="38bbf8133dea3255655956cd652f0572">
+
+                <div style="padding-top:80px;">
+                    <button type="button" data-form="signup-form" onclick="TokenSubmit(this);" class="btn btn-primary btn-lg btn-block">
+                        Sign up                    </button>
+                </div>
+            </form>
+
+            <div class="mt-3 text-center text-dark">
+                Already have an account? Login now? <a href="sign.html">Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="../../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../../static/js/app.js"></script>
+    <script src="../../static/js/mui.min.js"></script>
+    <script src="../../static/js/mui.loading.js"></script>
+    <script src="../../static/js/base.js"></script>
+
+</body>
+
+</html>
